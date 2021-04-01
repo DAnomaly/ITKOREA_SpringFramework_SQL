@@ -10,10 +10,16 @@
 * Oracle SQL Developer
 
 ## FILE
-○ 210331.sql
+### 2021.03.31
+* 210331.sql
 	* 테이블 생성시 PRIMARY KEY를 포함하는 CREATE문
 	* 테이블 생성시 FOREIGN KEY를 포함하는 CREATE문
-○ 210401_01.sql
-	* FOREIGN KEY 설명 : 1:M관계, N:M관계
-	* FOREIGN KEY 예제
-
+### 2021.04.01
+* 210401_01.sql
+	* FOREIGN KEY 설명 : 1:1관계, 1:M관계, N:M관계
+	* 테이블 생성 순서 : 부모(PK) -> 자식(FK)
+	* FOREIGN KEY 예제 (PK,FK)
+* 210401_02.sql
+	* 제약조건(CONSTRAINT)에 대해서 (NOT NULL, UNIQUE, CHECK)
+	* CONSTRAINT [제약조건이름] [제약조건]
+	* ALTER TABLE [테이블명] ADD [제약조건]

@@ -23,3 +23,18 @@
 	* 제약조건(CONSTRAINT)에 대해서 (NOT NULL, UNIQUE, CHECK)
 	* CONSTRAINT [제약조건이름] [제약조건]
 	* ALTER TABLE [테이블명] ADD [제약조건]
+### 2021.04.02
+* [210402_01.sql](https://github.com/DAnomaly/ITKOREA_SpringFramework_SQL/blob/main/210402_01.sql)
+	* ALTER TABLE를 통해 기본키(PRIMARY KEY), 외래키(FOREIGN KEY)를 추가
+	* ALTER TABLE를 통해 기본키(PRIMARY KEY), 외래키(FOREIGN KEY)를 삭제
+	* 제약조건의 확인
+	```
+	DESC USER_CONSTRAINTS; -- DD(Data Dictionary)의 정보 확인
+	SELECT constraint_name, table_name from USER_CONSTRAINTS; -- 현제 유저의 모든 테이블의 제약조건을 확인
+	``` 
+	* 제약조건의 활성화/비활성화
+	```
+	ALTER TABLE PLAYER DISABLE CONSTRAINT PLAYER_NATION_FK; -- 'PLAYER_NATION_FK'제약조건 비활성화
+	ALTER TABLE PLAYER ENABLE CONSTRAINT PLAYER_NATION_FK; -- 'PLAYER_NATION_FK'제약조건 활성화
+	```
+	

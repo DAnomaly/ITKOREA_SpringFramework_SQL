@@ -37,4 +37,11 @@
 	ALTER TABLE PLAYER DISABLE CONSTRAINT PLAYER_NATION_FK; -- 'PLAYER_NATION_FK'제약조건 비활성화
 	ALTER TABLE PLAYER ENABLE CONSTRAINT PLAYER_NATION_FK; -- 'PLAYER_NATION_FK'제약조건 활성화
 	```
-	
+* [210402_02.sql](https://github.com/DAnomaly/ITKOREA_SpringFramework_SQL/blob/main/210402_02.sql)
+	* 칼럼의 추가, 수정, 삭제, 이름변경
+	```
+	ALTER TABLE 테이블 ADD 칼럼명 타입; -- 칼럼 추가
+	ALTER TABLE 테이블 MODIFY 칼럼명 타입; -- 칼럼 수정
+	ALTER TABLE 테이블 DROP COLUMN 칼럼명; -- 칼럼 삭제
+	ALTER TABLE 테이블 RENAME COLUMN 기존칼럼 TO 신규칼럼명; -- 칼럼 이름변경
+	```

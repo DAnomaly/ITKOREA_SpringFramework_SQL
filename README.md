@@ -45,3 +45,13 @@
 	ALTER TABLE 테이블 DROP COLUMN 칼럼명; -- 칼럼 삭제
 	ALTER TABLE 테이블 RENAME COLUMN 기존칼럼 TO 신규칼럼명; -- 칼럼 이름변경
 	```
+* [210402_03.sql](https://github.com/DAnomaly/ITKOREA_SpringFramework_SQL/blob/main/210402_03.sql)
+	* 행(Row) 삽입 (INSERT)
+	* 행(Row) 수정 (UPDATE)
+	* 행(Row) 삭제 (DELETE)
+* [210402_04.sql](https://github.com/DAnomaly/ITKOREA_SpringFramework_SQL/blob/main/210402_04.sql)
+	* 테이블 생성 -> PRIMARY KEY -> FROEIGN KEY -> INSERT (예제)
+* [210402_05.sql](https://github.com/DAnomaly/ITKOREA_SpringFramework_SQL/blob/main/210402_05.sql)
+	* 오라클 내장 함수
+	* 집계 함수 : SUM, AVG, MAX, MIN, COUNT
+	* 문자 함수 : INITCAP, UPPER, LOWER, LENGTH, SUBSTR, INSTR, LPAD, RPAD, CONCAT(||), RTRIM, LTRIM, TRIM

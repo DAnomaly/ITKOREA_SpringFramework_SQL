@@ -32,7 +32,7 @@ VALUES (3,'총무부','대구');
 INSERT INTO department (dept_no, dept_name, location)
 VALUES (4,'기획부','서울');
 
--- 날짜 타입 작성 바업ㅂ
+-- 날짜 타입 작성 방법
 -- 1. '2021-04-02'
 -- 2. '21-04-02'
 -- 3. '2021/04/20'

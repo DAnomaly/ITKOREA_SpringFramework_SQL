@@ -52,6 +52,13 @@
 * [210402_04.sql](https://github.com/DAnomaly/ITKOREA_SpringFramework_SQL/blob/main/210402_04.sql)
 	* 테이블 생성 -> PRIMARY KEY -> FROEIGN KEY -> INSERT (예제)
 * [210402_05.sql](https://github.com/DAnomaly/ITKOREA_SpringFramework_SQL/blob/main/210402_05.sql)
-	* 오라클 내장 함수
+	* 오라클 내장 함수 1
 	* 집계 함수 : SUM, AVG, MAX, MIN, COUNT
 	* 문자 함수 : INITCAP, UPPER, LOWER, LENGTH, SUBSTR, INSTR, LPAD, RPAD, CONCAT(||), RTRIM, LTRIM, TRIM
+### 2021.04.05
+* [210405_01.sql](https://github.com/DAnomaly/ITKOREA_SpringFramework_SQL/blob/main/210405_01.sql)
+	* 오라클 내장 함수 2
+	* 숫자 함수 : ROUND, CEIL, FLOOR, TRUNC, ABS, SIGN, POWER
+	* 날짜 함수 : SYSDATE, TIMESTAMP, EXRTACT, 날짜 연산, 개월 연산(ADD_MONTHS, MONTHS_BEWEEN)
+	* 형 변환 함수 : TO_DATE, TO_NUMBER, TO_CHAR
+	* 기타 함수 : NULL처리(NVL, NVL2)

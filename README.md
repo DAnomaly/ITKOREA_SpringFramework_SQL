@@ -61,4 +61,4 @@
 	* 숫자 함수 : ROUND, CEIL, FLOOR, TRUNC, ABS, SIGN, POWER
 	* 날짜 함수 : SYSDATE, TIMESTAMP, EXRTACT, 날짜 연산, 개월 연산(ADD_MONTHS, MONTHS_BEWEEN)
 	* 형 변환 함수 : TO_DATE, TO_NUMBER, TO_CHAR
-	* 기타 함수 : NULL처리(NVL, NVL2)
+	* 기타 함수 : NULL처리(NVL, NVL2), 분기 함수(DECODE), 분기 표현식(CASE-WHEN-THEN-END)

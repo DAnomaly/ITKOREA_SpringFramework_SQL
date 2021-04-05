@@ -150,11 +150,44 @@ SELECT TO_CHAR(SYSDATE,'HH:MI:SS') FROM DUAL;
 -- 6. 기타 함수
 
 -- 1) NULL 처리 함수
--- NVL(값, 값이 NULL일때 사용할 값)
+-- (1) NVL(값, 값이 NULL일때 사용할 값)
 SELECT kor, NVL(kor, 0), name FROM score;
 
 -- 집계함수(SUM, AVG, MAX MIN, COUNT 등)들은 NULL값을 무시합니다
 SELECT AVG(kor) 평균1, AVG(NVL(kor, 0)) 평균2 FROM score;
 
--- 2) NVL2(값, 값이 NULL이 아닐 때, 값이 NULL일 때)
+-- (2) NVL2(값, 값이 NULL이 아닐 때, 값이 NULL일 때)
 SELECT kor, NVL2(kor, 'notNull', 'isNull') isnull, name FROM score;
+
+-- 2) 분기 함수
+-- DECODE(표현식, 조건1, 결과1, 조건2, 결과2, ..., 기본값)
+-- 동등비교만 가능
+SELECT DECODE('봄','봄','꽃놀이','여름','물놀이','가을','단풍놀이','겨울','눈싸움') AS 계절별놀이 FROM DUAL;
+SELECT kor, DECODE(FLOOR(kor/10), NULL, '값없음', 7,'C',8,'B',9,'A',10,'+A','D') AS 성적, name FROM score;
+
+-- 3) 분기 표현식
+-- CASE 표현식 WHEN 비교식 THEN 결과값 ... ELSE 나머지경우 END
+-- CASE WHEN 조건식 THEN 결과값 ... ELSE 나머지경우 END
+
+-- CASE A값
+-- WHEN A값 THEN 'A점'
+-- WHEN B값 THEN 'B점'
+-- ELSE '다른값'
+-- END
+
+-- CASE
+-- WHEN A값 > B값 TEHN 'B값보다 크다'
+-- WHEN A값 < B값 TEHN 'B값보다 작다'
+-- ELSE A값과 B값은 같다
+-- END
+
+SELECT name,
+    (NVL(kor,0) + eng + mat) / 3 AS 평균,
+    (CASE
+        WHEN (NVL(kor,0) + eng + mat) / 3 >= 90 THEN 'A학점'
+        WHEN (NVL(kor,0) + eng + mat) / 3 >= 80 THEN 'B학점'
+        WHEN (NVL(kor,0) + eng + mat) / 3 >= 70 THEN 'C학점'
+        WHEN (NVL(kor,0) + eng + mat) / 3 >= 60 THEN 'D학점'
+        ELSE 'F학점'
+    END) AS 학점
+FROM score;

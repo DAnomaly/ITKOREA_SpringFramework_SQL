@@ -64,3 +64,6 @@
 	* 기타 함수 : NULL처리(NVL, NVL2), 분기 함수(DECODE), 분기 표현식(CASE-WHEN-THEN-END)
 * [210405_02.sql](https://github.com/DAnomaly/ITKOREA_SpringFramework_SQL/blob/main/210405_02.sql) 
 	* SELECT 연습 예제
+* [210405_02-BLANK.sql](https://github.com/DAnomaly/ITKOREA_SpringFramework_SQL/blob/main/210405_02-BLANK.sql)
+	* SELECT 연습 예제의 빈칸 버전
+	* SELECT 연습하실 때 이 파일을 사용하시면 됩니다

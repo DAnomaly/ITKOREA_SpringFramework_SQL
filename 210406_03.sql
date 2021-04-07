@@ -60,17 +60,74 @@ SELECT
 
 -- 5. 도시이름(city)이 T 로 시작하는 지역에서 근무하는 사원들의 employee_id, last_name, department_id, city 를 조회한다.
 -- 사용할 테이블 (employees, departments, locations)
-
-
+SELECT 
+       e.employee_id
+     , e.last_name
+     , l.city
+  FROM locations l, departments d, employees e
+ WHERE l.location_id = d.location_id
+   AND d.department_id = e.department_id
+   AND l.city LIKE 'T%';
+   
+SELECT 
+       e.employee_id
+     , e.last_name
+     , l.city
+  FROM locations l INNER JOIN departments d 
+    ON l.location_id = d.location_id INNER JOIN employees e
+    ON d.department_id = e.department_id
+ WHERE l.city LIKE 'T%';
+   
 -- 6. 자신의 상사(manager_id)의 고용일(hire_date)보다 빨리 입사한 사원을 찾아서 last_name, hire_date, manager_id 를 조회한다. 
 -- 사용할 테이블 (employees)
-
+SELECT
+       e.last_name
+     , e.hire_date AS 내입사일
+     , m.hire_date AS 상사입사일
+     , m.last_name
+     , e.manager_id
+  FROM employees m JOIN employees e
+    ON m.employee_id = e.manager_id
+ WHERE m.hire_date > e.hire_date;
 
 -- 7. 같은 소속부서(department_id)에서 나보다 늦게 입사(hire_date)하였으나 나보다 높은 연봉(salary)을 받는 사원이 존재하는 사원들의
 -- department_id, full_name(first_name 과 last_name 사이에 공백을 포함하여 연결), salary, hire_date 를 full_name 순으로 정렬하여 조회한다.
 -- 사용할 테이블 (employees)
+SELECT
+       e.department_id AS 부서번호
+     , e.first_name || ' ' || e.last_name AS 내이름
+     , e.salary AS 내급여
+     , e.hire_date AS 내입사일
+     , d.first_name || ' ' || d.last_name AS 네이름
+     , d.salary AS 네급여
+     , d.hire_date AS 네입사일
+  FROM employees d JOIN employees e
+    ON d.department_id = e.department_id
+ WHERE d.hire_date > e.hire_date
+   AND d.salary > e.salary
+ ORDER BY 내이름;
 
+SELECT
+       DISTINCT e.department_id AS 부서번호
+     , e.first_name || ' ' || e.last_name AS 내이름
+     , e.salary AS 내급여
+     , e.hire_date AS 내입사일
+  FROM employees d JOIN employees e
+    ON d.department_id = e.department_id
+ WHERE d.hire_date > e.hire_date
+   AND d.salary > e.salary
+ ORDER BY 내이름;
 
 -- 8. 같은 소속부서(department_id)의 다른 사원보다 늦게 입사(hire_date)하였으나 현재 더 높은 연봉(salary)을 받는 사원들의
 -- department_id, full_name(first_name 과 last_name 사이에 공백을 포함하여 연결), salary, hire_date 를 full_name 순으로 정렬하여 조회한다.
 -- 사용할 테이블 (employees)
+SELECT
+       DISTINCT e.department_id AS 부서번호
+     , e.first_name || ' ' || e.last_name AS 이름
+     , e.salary
+     , e.hire_date
+  FROM employees d JOIN employees e
+    ON d.department_id = e.department_id
+ WHERE d.hire_date < e.hire_date
+   AND d.salary < e.salary
+ ORDER BY 부서번호,이름;

@@ -112,3 +112,44 @@ SELECT
  GROUP BY D.DEPT_NO;
  
     
+
+-- 리뷰 1. 모든 사원들의 name, dept_name 을 조회하시오. (부서가 없는 사원은 조회하지 마시오.)
+SELECT
+       e.name
+     , d.dept_name
+  FROM department d INNER JOIN employee e 
+    ON d.dept_no = e.depart;
+
+SELECT
+       e.name
+     , d.dept_name
+  FROM department d, employee e 
+ WHERE d.dept_no = e.depart;
+
+-- 리뷰 2. '서울'에서 근무하는 사원들의 emp_no, name을 조회하시오.
+SELECT
+       e.emp_no
+     , e.name
+  FROM department d INNER JOIN employee e
+    ON d.dept_no = e.depart
+ WHERE d.location = '서울';
+ 
+SELECT
+       e.emp_no
+     , e.name
+  FROM department d, employee e
+ WHERE d.dept_no = e.depart
+   AND d.location = '서울';
+ 
+-- 리뷰 3. 모든 사원들의 name, dept_name을 조회하시오. ( 부서가 없는 사원도 조회하시오.)
+SELECT
+       e.name
+     , d.dept_name
+  FROM department d RIGHT OUTER JOIN employee e
+    ON d.dept_no = e.depart;
+
+SELECT
+       e.name
+     , d.dept_name
+  FROM department d, employee e
+ WHERE d.dept_no(+) = e.depart;

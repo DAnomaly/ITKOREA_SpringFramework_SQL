@@ -67,3 +67,21 @@
 * [210405_02-BLANK.sql](https://github.com/DAnomaly/ITKOREA_SpringFramework_SQL/blob/main/210405_02-BLANK.sql)
 	* SELECT 연습 예제의 빈칸 버전
 	* SELECT 연습하실 때 이 파일을 사용하시면 됩니다
+### 2021.04.06
+* [210406_01.sql](https://github.com/DAnomaly/ITKOREA_SpringFramework_SQL/blob/main/210406_01.sql)
+	* SELECT 연습 예제 (GROUP BY, HAVING)
+* [210406_01-BLANK.sql](https://github.com/DAnomaly/ITKOREA_SpringFramework_SQL/blob/main/210406_01-BLANK.sql)
+	* 연습 예제의 빈칸 버전
+* [210406_02.sql](https://github.com/DAnomaly/ITKOREA_SpringFramework_SQL/blob/main/210406_02.sql)
+	* INNER JOIN, OUTTER JOIN에 대한 학습
+* [210406_03.sql](https://github.com/DAnomaly/ITKOREA_SpringFramework_SQL/blob/main/210406_03.sql)
+	* JOIN 연습 예제
+* [210406_03-BLANK.sql](https://github.com/DAnomaly/ITKOREA_SpringFramework_SQL/blob/main/210406_03-BLANK.sql)
+	* JOIN 연습 예제 빈칸 버전
+### 2021.04.07
+* [210407_01.sql](https://github.com/DAnomaly/ITKOREA_SpringFramework_SQL/blob/main/210407_01.sql)
+	* 서브쿼리에 대한 학습
+* [210407_02.sql](https://github.com/DAnomaly/ITKOREA_SpringFramework_SQL/blob/main/210407_02.sql)
+	* 서브쿼리 연습 예제
+* [210407_02-BLANK.sql](https://github.com/DAnomaly/ITKOREA_SpringFramework_SQL/blob/main/210407_02-BLANK.sql)
+	* 서브쿼리 연습 예제 빈칸 버전

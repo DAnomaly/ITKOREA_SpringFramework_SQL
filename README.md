@@ -88,3 +88,5 @@
 ###2021.04.08
 * [210408_01.sql](https://github.com/DAnomaly/ITKOREA_SpringFramework_SQL/blob/main/210408_01.sql)
 	* 인덱스에 대해서
+* [210408_02.sql](https://github.com/DAnomaly/ITKOREA_SpringFramework_SQL/blob/main/210408_02.sql)
+	* 뷰 생성

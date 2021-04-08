@@ -97,3 +97,7 @@
 	* DDL 연습
 * [210408_04-BLANK.sql](https://github.com/DAnomaly/ITKOREA_SpringFramework_SQL/blob/main/210408_04-BLANK.sql)
 	* 빈칸 버전
+* [210408_05.sql](https://github.com/DAnomaly/ITKOREA_SpringFramework_SQL/blob/main/210408_05.sql)
+	* DML 연습
+* [210408_05-BLANK.sql](https://github.com/DAnomaly/ITKOREA_SpringFramework_SQL/blob/main/210408_05-BLANK.sql)
+	* 빈칸 버전

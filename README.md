@@ -93,3 +93,7 @@
 * [210408_03.sql](https://github.com/DAnomaly/ITKOREA_SpringFramework_SQL/blob/main/210408_03.sql)
 	* 시퀀스
 	* ROWNUM, ROWID
+* [210408_04.sql](https://github.com/DAnomaly/ITKOREA_SpringFramework_SQL/blob/main/210408_04.sql)
+	* DDL 연습
+* [210408_04-BLANK.sql](https://github.com/DAnomaly/ITKOREA_SpringFramework_SQL/blob/main/210408_04-BLANK.sql)
+	* 빈칸 버전

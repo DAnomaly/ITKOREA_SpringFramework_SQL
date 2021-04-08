@@ -90,3 +90,6 @@
 	* 인덱스에 대해서
 * [210408_02.sql](https://github.com/DAnomaly/ITKOREA_SpringFramework_SQL/blob/main/210408_02.sql)
 	* 뷰 생성
+* [210408_03.sql](https://github.com/DAnomaly/ITKOREA_SpringFramework_SQL/blob/main/210408_03.sql)
+	* 시퀀스
+	* ROWNUM, ROWID

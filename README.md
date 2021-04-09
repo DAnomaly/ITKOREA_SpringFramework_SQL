@@ -85,7 +85,7 @@
 	* 서브쿼리 연습 예제
 * [210407_02-BLANK.sql](https://github.com/DAnomaly/ITKOREA_SpringFramework_SQL/blob/main/210407_02-BLANK.sql)
 	* 서브쿼리 연습 예제 빈칸 버전
-###2021.04.08
+### 2021.04.08
 * [210408_01.sql](https://github.com/DAnomaly/ITKOREA_SpringFramework_SQL/blob/main/210408_01.sql)
 	* 인덱스에 대해서
 * [210408_02.sql](https://github.com/DAnomaly/ITKOREA_SpringFramework_SQL/blob/main/210408_02.sql)

@@ -124,9 +124,15 @@ SELECT c.customer_name AS 이름
 
 -- 8. 고객별로 분류하여 각 고객의 이름과 각 고객별 총 구매액을 조회하시오.
 SELECT c.customer_name AS 이름
-     , SUM(o.sales_price) AS 총구매액
+     , NVL(SUM(o.sales_price),0) AS 총구매액
   FROM customer c LEFT OUTER JOIN orders o
     ON c.customer_id = o.customer_id
+ GROUP BY c.customer_name;
+
+SELECT c.customer_name AS 이름
+     , NVL(SUM(o.sales_price),0) AS 총구매액
+  FROM customer c, orders o
+ WHERE c.customer_id = o.customer_id(+)
  GROUP BY c.customer_name;
 
 -- 9. 주문한 이력이 없는 고객의 이름을 조회하시오.
@@ -135,10 +141,15 @@ SELECT c.customer_name AS 이름
     ON c.customer_id = o.customer_id
  GROUP BY c.customer_name
 HAVING COUNT(o.order_id) = 0;
- 
--- 10. 고객별로 총 구매횟수를 조회하시오.
+
 SELECT c.customer_name AS 이름
+  FROM customer c
+ WHERE c.customer_id NOT IN(SELECT DISTINCT o.customer_id
+                              FROM orders o);
+-- 10. 고객별로 총 구매횟수를 조회하시오.
+SELECT c.customer_id AS id
+     , c.customer_name AS 이름
      , COUNT(o.order_id) AS 구매휫수
   FROM customer c LEFT OUTER JOIN orders o
     ON c.customer_id = o.customer_id
- GROUP BY c.customer_name;
+ GROUP BY c.customer_id, c.customer_name;

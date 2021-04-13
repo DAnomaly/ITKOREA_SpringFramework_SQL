@@ -101,3 +101,14 @@
 	* DML 연습
 * [210408_05-BLANK.sql](https://github.com/DAnomaly/ITKOREA_SpringFramework_SQL/blob/main/210408_05-BLANK.sql)
 	* 빈칸 버전
+### 2021.04.13
+* [210413_01.sql](https://github.com/DAnomaly/ITKOREA_SpringFramework_SQL/blob/main/210413_01.sql)
+	* PLSQL
+	* (DECLARE) - BEGIN - (EXCEPTION) - END
+	* IF ```(IF - (ELSIF) - (ELSE) - END IF)```
+	* CASE ```(CASE - WHEN - (ELSE) - END CASE)```
+	* WHILE ```(WHILE - LOOP - END LOOP)```
+	* FOR ```(FOR - IN - LOOP - END LOOP)```
+	* EXIT ```JAVA : break;```
+	* CONTINUE ```JAVA : continue;```
+	* TYPE ```테이블, 레코드, 테이블형 레코드 타입```

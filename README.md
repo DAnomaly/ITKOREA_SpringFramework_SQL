@@ -112,3 +112,8 @@
 	* EXIT ```JAVA : break;```
 	* CONTINUE ```JAVA : continue;```
 	* TYPE ```테이블, 레코드, 테이블형 레코드 타입```
+	* EXCEPTION ```예외 처리```
+* [210413_02.sql](https://github.com/DAnomaly/ITKOREA_SpringFramework_SQL/blob/main/210413_02.sql)
+	* 프로시저 (PROCEDURE)
+	* 사용자 함수 (FUNCTION)
+	* 트리거 (TRIGGER)

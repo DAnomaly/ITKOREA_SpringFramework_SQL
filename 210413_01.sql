@@ -314,4 +314,18 @@ EXCEPTION
     WHEN TOO_MANY_ROWS THEN
         DBMS_OUTPUT.PUT_LINE('해당 사원이 많다');
 END;
-    
+
+-- 모든 예외 처리    
+DECLARE
+    v_last_name employees.last_name%TYPE;
+BEGIN
+    SELECT last_name 
+      INTO v_last_name
+      FROM employees
+     WHERE employee_id = 5;
+    DBMS_OUTPUT.PUT_LINE('사원: ' || v_last_name); 
+EXCEPTION
+    WHEN OTHERS THEN
+        DBMS_OUTPUT.PUT_LINE('예외 코드: '||SQLCODE);
+        DBMS_OUTPUT.PUT_LINE('예외 메시지: '||SQLERRM);
+END;
